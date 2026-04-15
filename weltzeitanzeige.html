@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weltzeitanzeige</title>
+  <link rel="stylesheet" href="weltzeitanzeige.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Interaktive Uhr</p>
+        <h1>Weltzeitanzeige</h1>
+        <p class="hero-copy">Aktuelle Uhrzeit f�r London, New York, Teheran und die Milit�rzeit (UTC).</p>
+      </div>
+      <div class="clock-panel" aria-live="polite">
+        <span class="clock-label">Aktuelle Uhrzeit Berlin</span>
+        <strong id="updateTime">--:--:--</strong>
+        <span class="date-label">Datum</span>
+        <strong id="updateDate">--.--.----</strong>
+      </div>
+    </header>
+
+    <main class="grid">
+      <article class="card">
+        <h2>London</h2>
+        <p class="timezone-name">Europe/London</p>
+        <output id="LondonTime" class="time">--:--:--</output>
+        <p class="offset">UTC+0 / UTC+1 im Sommer</p>
+      </article>
+
+      <article class="card">
+        <h2>New York</h2>
+        <p class="timezone-name">America/New_York</p>
+        <output id="NewYorkTime" class="time">--:--:--</output>
+        <p class="offset">UTC-5 / UTC-4 im Sommer</p>
+      </article>
+
+      <article class="card">
+        <h2>Teheran</h2>
+        <p class="timezone-name">Asia/Tehran</p>
+        <output id="TeheranTime" class="time">--:--:--</output>
+        <p class="offset">UTC+3:30</p>
+      </article>
+
+      <article class="card">
+        <h2>Milit�rzeit</h2>
+        <p class="timezone-name">UTC / 24 Stunden</p>
+        <output id="MilitaerTime" class="time">--:--:--</output>
+        <p class="offset">Ideal f�r pr�zise Zeitangaben</p>
+      </article>
+    </main>
+
+    <footer class="footnote">
+      <p>Diese Seite aktualisiert die Uhrzeit automatisch jede Sekunde.</p>
+    </footer>
+  </div>
+
+  <script src="weltzeitanzeige.js" defer></script>
+</body>
+</html>
